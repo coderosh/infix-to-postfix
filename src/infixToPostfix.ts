@@ -53,7 +53,7 @@ function infixToPostfix(str: string) {
     history.push({ stack: stack.toArray(), postfix: [...postfix], char });
   }
 
-  while (stack.length !== 0) postfix.push(stack.pop());
+  while (!stack.isEmpty()) postfix.push(stack.pop());
   history.push({ stack: [], postfix: [...postfix], char: "" });
 
   return { history, postfix };

@@ -31,16 +31,8 @@ class Stack<T = any> {
     return this.#top;
   }
 
-  get length() {
-    return this.#top;
-  }
-
   toArray() {
     return [...this.#data];
-  }
-
-  fromArray(data: any) {
-    this.#data = data;
   }
 }
 
